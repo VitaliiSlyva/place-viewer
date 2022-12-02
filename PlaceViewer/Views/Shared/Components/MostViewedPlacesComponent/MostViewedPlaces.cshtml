@@ -1,0 +1,23 @@
+﻿@model IReadOnlyCollection<PlaceViewer.Domain.Models.Place>
+
+    
+@if (Model.Any())
+{
+    <h3 style="margin-top: 30px; margin-bottom: 10px;">
+        Most viewed places
+    </h3>
+    <div>
+        @foreach (var place in Model)
+        {
+            <div>
+                @Html.ActionLink(
+                    $"{place.Name} - {place.ViewCount} Visits",
+                    "Get", 
+                    "Place",
+                    new { name = place.Name },
+        new { @class="btn btn-light", style ="margin-bottom: 7px" })
+                
+            </div>
+        }
+    </div>
+}

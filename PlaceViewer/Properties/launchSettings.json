@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "PlaceViewer": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5159/",
+      "launchUrl": "places/search",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

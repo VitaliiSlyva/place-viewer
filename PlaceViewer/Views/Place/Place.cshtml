@@ -1,0 +1,44 @@
+﻿@model PlaceViewer.Domain.Models.Place
+
+@if (string.IsNullOrEmpty(Model.ImageUrl))
+{
+    <div style="margin-bottom: 15px;">
+        @Html.ActionLink(
+            "Add Place",
+            "GetCreate", 
+            new { name = Model.Name },
+            new { @class="btn btn-secondary" })
+    </div>
+}
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            Place Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <dt class="col-sm-2">
+                View Count
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ViewCount)
+            </dd>
+        }
+        <dt class="col-sm-2">
+            Image
+        </dt>
+        <dd class="col-sm-10">
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <img src="@Model.ImageUrl" alt="/img/empty.gif" style="max-width: 70%">
+            }
+            else
+            {
+                <img src="/img/empty.gif" alt="Image..." width="200px">
+            }
+        </dd>
+    </dl>
+</div>

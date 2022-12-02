@@ -348,3 +348,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/PlaceViewer/.config/dotnet-tools.json
+/PlaceViewer/Properties/ServiceDependencies/demo-place-viewer - Web Deploy/profile.arm.json
